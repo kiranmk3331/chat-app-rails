@@ -13,3 +13,7 @@ Turbolinks.start();
 ActiveStorage.start();
 
 import "@doabit/semantic-ui-sass";
+
+$(document).on("turbolinks:load", function () {
+  $(".ui.dropdown").dropdown();
+});

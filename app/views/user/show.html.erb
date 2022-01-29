@@ -1,0 +1,17 @@
+<div class="ui center aligned header fluid raised cards">
+  <div class="card user-card">
+    <div class="content">
+      <div class="ui center aligned big header red header">
+        <h1><%= @user.username.capitalize %></h1>
+      </div>
+      <div class="ui content">
+       <em class="ui blue header small"> <%= pluralize(@user.messages.count, "messages") %></em>
+      </div>
+    </div>
+    <div class="extra content">
+      <div class="ui two buttons">
+        <%= link_to "Edit your profile", edit_user_path(@user), class: "ui basic green button" %>
+        <%= link_to "Delete your profile",user_path(@user), class: "ui basic green button", method: :delete %>
+      </div>
+    </div>
+  </div>

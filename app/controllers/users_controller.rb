@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-class UserController < ApplicationController
+class UsersController < ApplicationController
   before_action :redirect_if_logged_in, only: %i[new create]
   before_action :require_user, only: %i[show edit destroy update]
   before_action :load_user, only: %i[show edit destroy update]
+
   def new
     @user = User.new
   end
